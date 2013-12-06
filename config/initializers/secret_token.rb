@@ -24,5 +24,4 @@ def secure_token
   end
 end
 
-
-StudentFeedback::Application.config.secret_key_base = secure_token
+StudentFeedback::Application.config.secret_token = 'd96d7232b972957d3b59d1426476d8f925a2a82d9156dc837589af0b47e705be9df6be93e0a44db71203e76578282412fd21cb5799eccbce1277a4e9c783f4d8'
