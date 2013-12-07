@@ -19,12 +19,15 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails', '4.2.1'
+
 end
 gem 'jquery-rails'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'turbolinks'
 gem 'jbuilder'
+
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
