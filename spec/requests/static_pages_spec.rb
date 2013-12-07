@@ -10,7 +10,11 @@ describe "Static pages" do
     end
         it "should have the title 'Home'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial Student Feedback | Home")
+      expect(page).to have_title("Student Feedback")
+    end
+        it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Home')
     end
   end
 
@@ -22,7 +26,11 @@ describe "Static pages" do
     end
         it "should have the title 'Help'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails Tutorial Student Feedback | Help")
+      expect(page).to have_title("Student Feedback")
+    end
+        it "should not have a custom page title" do
+      visit '/static_pages/help'
+      expect(page).not_to have_title('| Help')
     end
   end
 
@@ -34,7 +42,11 @@ describe "Static pages" do
     end
         it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      expect(page).to have_title("Ruby on Rails Tutorial Student Feedback | About Us")
+      expect(page).to have_title("Student Feedback")
+    end
+        it "should not have a custom page title" do
+      visit '/static_pages/about'
+      expect(page).not_to have_title('| About Us')
     end
   end
 end
