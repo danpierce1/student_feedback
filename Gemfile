@@ -13,12 +13,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 group :development, :test do
-  gem 'rspec-rails', '2.10.0'
+  gem 'rspec-rails', '2.13.1'
   gem 'sqlite3'
 end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '2.1.0'
 end
 gem 'jquery-rails'
 gem 'bootstrap-sass', '2.0.0'
