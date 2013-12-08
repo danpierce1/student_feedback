@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	ActiveModel::ForbiddenAttributesProtection
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :admin, :email, :name, :password, :password_confirmation
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
