@@ -1,10 +1,16 @@
 <li>
-  <span class="strengths"><%= feedback.strengths %></span>
-  <span class="weaknesses"><%= feedback.weaknesses %></span>
-  <span class="recommendations"><%= feedback.recommendations %></span>
-  <span class="rating">Rating : <%= feedback.rating %></span>
+  <span class="content"><%= feedback.strengths %></span>
+  <span class="content"><%= feedback.weaknesses %></span>
+  <span class="content"><%= feedback.recommendations %></span>
+  <span class="content">Rating : <%= feedback.rating %></span>
 
   <span class="timestamp">
     Posted <%= time_ago_in_words(feedback.created_at) %> ago.
   </span>
+
+    <% if current_user?(feedback.user) %>
+    <%= link_to "delete", feedback, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: feedback.content %>
+  <% end %>
 </li>

@@ -1,0 +1,16 @@
+<%= form_for(@feedback) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :strengths, placeholder: "Input strengths..." %>
+  </div>
+    <div class="field">
+    <%= f.text_area :weaknesses, placeholder: "Input weaknesses..." %>
+  </div>
+    <div class="field">
+    <%= f.text_area :recommendations, placeholder: "Input recommendations..." %>
+  </div>
+    <div class="field">
+    <%= f.text_area :rating, placeholder: "Input rating..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
