@@ -22,7 +22,7 @@ class FeedbacksController < ApplicationController
   private
 
     def feedback_params
-      params.require(:feedback).permit(:content)
+      params.require(:feedback).permit(:strengths, :weaknesses, :recommendations, :rating)
     end
 
     def correct_user
