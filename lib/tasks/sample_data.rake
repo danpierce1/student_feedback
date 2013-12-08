@@ -13,7 +13,8 @@ namespace :db do
       User.create!(name: username,
                     email: email,
                    password: password,
-                   password_confirmation: password)
+                   password_confirmation: password
+)
     end
     users = User.all(limit: 6)
     50.times do
@@ -27,5 +28,23 @@ namespace :db do
                     recommendations: recommendations,
                     rating: rating) }
     end
+
+  course1= Course.create!(name: "Multimedia Applications Development")
+  course2= Course.create!(name: "Software Systems Development")
+  course3= Course.create!(name: "Entertainment Systems")
+  course4= Course.create!(name: "Applied  Computing")
+
+  Cmodule.create!(name: "Module1")
+  Cmodule.create!(name: "Module2")
+  Cmodule.create!(name: "Module3")
+  Cmodule.create!(name: "Module4")
+  Cmodule.create!(name: "Module5")
+  Cmodule.create!(name: "Module6")
+  Cmodule.create!(name: "Module7")
+  Cmodule.create!(name: "Module8")
+  Cmodule.create!(name: "Module9")
+  Cmodule.create!(name: "Module10")
+
   end
+
 end

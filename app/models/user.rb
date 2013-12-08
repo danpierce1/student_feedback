@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	ActiveModel::ForbiddenAttributesProtection
     has_many :feedbacks, dependent: :destroy
 
-  attr_accessible :admin, :email, :name, :password, :password_confirmation
+  attr_accessible :admin, :email, :name, :password, :password_confirmation, :course
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 

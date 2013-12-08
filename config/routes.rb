@@ -1,5 +1,8 @@
 StudentFeedback::Application.routes.draw do
+
   resources :users
+  resources :courses
+  resources :cmodules
   resources :sessions, only: [:new, :create, :destroy]
   resources :feedbacks, only: [:create, :destroy]
 
@@ -13,6 +16,9 @@ StudentFeedback::Application.routes.draw do
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+
+  match '/courses', to: 'courses#index',        via: 'get'
+  match '/modules', to: 'cmodules#index',        via: 'get'
 
 get "static_pages/about"
 get "static_pages/home"
