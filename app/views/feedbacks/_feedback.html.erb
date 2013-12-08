@@ -11,6 +11,6 @@
     <% if current_user?(feedback.user) %>
     <%= link_to "delete", feedback, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: feedback.content %>
+                                     title: feedback.strengths %>
   <% end %>
 </li>
