@@ -15,5 +15,17 @@ namespace :db do
                    password: password,
                    password_confirmation: password)
     end
+    users = User.all(limit: 6)
+    50.times do
+      strengths = Faker::Lorem.sentence(5)
+      weaknesses = "Weakness"  
+      recommendations = "recommendations"
+      rating = "1"
+
+      users.each { |user| user.feedbacks.create!(strengths: strengths,
+                    weaknesses: weaknesses,
+                    recommendations: recommendations,
+                    rating: rating) }
+    end
   end
 end
