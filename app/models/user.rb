@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 	ActiveModel::ForbiddenAttributesProtection
     has_many :feedbacks, dependent: :destroy
-    belongs_to :course
+
+    # belongs_to :course
     # has_many :cmodules, :through => :course,
     #           :source => :user
 
