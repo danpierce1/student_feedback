@@ -10,6 +10,15 @@ $grayMediumLight: #eaeaea;
 }
 
 ///////////////////////////// universal styling \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+.container{
+  h1 {
+  margin-top: 150px;
+  }
+
+  .row {
+  margin-top: 150px;
+  }
+}
 
 html {
   overflow-y: scroll;
@@ -44,7 +53,8 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: center;;
+  margin-top: 150px;
 }
 
 h2 {
@@ -215,3 +225,11 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+
+
+
+
+
+
+/////////////////////////////////// BOOTSTRAP RESPONSIVE CSS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
