@@ -2,8 +2,8 @@ class User < ActiveRecord::Base
 	ActiveModel::ForbiddenAttributesProtection
     has_many :feedbacks, dependent: :destroy
     belongs_to :course
-    has_many :cmodules, :through => :course,
-              :source => :user
+    # has_many :cmodules, :through => :course,
+    #           :source => :user
 
   attr_accessible :admin, :email, :name, :password, :password_confirmation, :course
   before_save { self.email = email.downcase }
