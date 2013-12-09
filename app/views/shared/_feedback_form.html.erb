@@ -12,6 +12,9 @@
     <div class="field">
     <%= f.text_area :rating, placeholder: "Input rating..." %>
   </div>
+     <div class="field">
+      <%= f.collection_select :cmodules, Cmodule.all, :name, :name %>
+  </div>
 
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
